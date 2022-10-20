@@ -6,6 +6,17 @@ import streamlit.components.v1 as components
 
 st.sidebar.title("IT E-Book Search Engine/Library")
 
+buffer,buffer,buffer,buffer,icon_1, icon_2, icon_3 = st.columns(7)
+
+with icon_1:
+    st.markdown("[![](https://github.com/riteshsharma29/Python_Beginners_app/blob/main/assets/my_linkedin.png?raw=true)](https://www.linkedin.com/in/ritesh-sharma5/)")
+
+with icon_2:
+    st.markdown("[![](https://github.com/riteshsharma29/Python_Beginners_app/blob/main/assets/my_youtube.png?raw=true)](https://www.youtube.com/channel/UCmH_jmNBR5O9o8UA8UHjwag)")
+
+with icon_3:
+    st.markdown("[![](https://github.com/riteshsharma29/Python_Beginners_app/blob/main/assets/my_github.png?raw=true)](https://github.com/riteshsharma29/)")
+
 # passing integer input
 page_num = st.sidebar.number_input('Provide Page Number For Search', min_value=1)
 # passing string input
