@@ -15,6 +15,11 @@ st.text_area("output2",sqliteConnection)
 cursor = sqliteConnection.cursor()
 sqlite_select_query = """SELECT * from todo"""
 
+cursor.execute(sqlite_select_query)
+records = cursor.fetchall()
+
+st.text_area("output3",records)
+
 # reading todo table
-df = pd.read_sql(sqlite_select_query,sqliteConnection)
-st.table(df)
+#df = pd.read_sql(sqlite_select_query,sqliteConnection)
+#st.table(df)
