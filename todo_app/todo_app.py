@@ -13,9 +13,17 @@ st.text_area("output",os.getcwd())
 st.text_area("output2",sqliteConnection)
 
 cursor = sqliteConnection.cursor()
-sqlite_select_query = """SELECT * from todo"""
+sqlite_select_query = """CREATE TABLE todo (
+	sno INTEGER NOT NULL, 
+	title VARCHAR(200) NOT NULL, 
+	"desc" VARCHAR(500) NOT NULL, 
+	date_created DATETIME, 
+	PRIMARY KEY (sno)
+)"""
 
 cursor.execute(sqlite_select_query)
+sqliteConnection.commit()
+
 records = cursor.fetchall()
 
 st.text_area("output3",records)
