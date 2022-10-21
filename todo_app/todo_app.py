@@ -12,3 +12,9 @@ sqliteConnection = sqlite3.connect("/app/api_development/todo.db")
 st.text_area("output",os.getcwd())
 st.text_area("output2",sqliteConnection)
 
+cursor = sqliteConnection.cursor()
+sqlite_select_query = """SELECT * from todo"""
+
+# reading todo table
+df = pd.read_sql(sqlite_select_query,sqliteConnection)
+st.table(df)
