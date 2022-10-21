@@ -6,7 +6,8 @@ import pandas as pd
 import sqlite3
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:/app/api_development/todo.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///" + os.path.join("/app/api_development/", 'todo.db')
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
