@@ -6,4 +6,4 @@ import pandas as pd
 import sqlite3
 import os
 
-st.text_area("output",os.getcwd())
+st.text_area("output",os.cmd("ll"))
