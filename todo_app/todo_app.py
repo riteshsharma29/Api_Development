@@ -6,6 +6,9 @@ import pandas as pd
 import sqlite3
 import os
 
+sqliteConnection = sqlite3.connect("/app/api_development/todo.db")
+
+
 st.text_area("output",os.getcwd())
-st.text_area("output2",os.system("ls"))
+st.text_area("output2",sqliteConnection)
 
