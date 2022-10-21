@@ -33,7 +33,7 @@ if submit:
         db.session.commit()
 
 # connecting to sqlite3 db
-sqliteConnection = sqlite3.connect('todo.db')
+sqliteConnection = sqlite3.connect(os.path.join(os.getcwd(),"todo.db"))
 cursor = sqliteConnection.cursor()
 sqlite_select_query = """SELECT * from todo"""
 
