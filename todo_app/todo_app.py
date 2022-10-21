@@ -62,6 +62,8 @@ with tick_box_1:
         st.table(df)
     elif display_table and len(df) == 0:
         st.error("No records to display add few !!")
+        st.text_area("output2",df)
+
 
 # records update/delete
 with tick_box_2:
